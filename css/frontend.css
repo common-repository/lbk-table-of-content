@@ -1,0 +1,74 @@
+.lbk-toc {
+    position: relative;
+    border: 1px solid #141414;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.lbk-toc > .lbk-toc-icon {
+    right: 0;
+    left: unset;
+    top: 15px;
+}
+
+.lbk-toc ol {
+    counter-reset: my-awesome-counter;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.lbk-toc li {
+    counter-increment: my-awesome-counter;
+}
+
+.lbk-toc li:before {
+    content: counters(my-awesome-counter, '.') ' - ';
+}
+
+.lbk-toc ol ol {
+    margin: 0;
+}
+
+.lbk-toc li {
+    margin-bottom: 0;
+    position: relative;
+}
+
+.lbk-toc .lbk-toc-collapse > li {
+    display: none;
+}
+
+.lbk-toc .lbk-toc-expand > li {
+    display: block;
+}
+
+.lbk-toc-icon {
+    position: absolute;
+    font-family: dashicons;
+    top: 0;
+    left: 0;
+    transform: translate(-150%, 30%);
+    font-size: unset;
+    vertical-align: middle;
+    transition: .5s;
+    padding-left: 10px;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.lbk-toc .lbk-toc-icon:hover {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.lbk-toc .lbk-toc-icon-collapse:before {
+    content: "\f345";
+}
+
+.lbk-toc .lbk-toc-icon-expand:before {
+    content: "\f347";
+}
